@@ -5,12 +5,15 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: spring-helm-prom
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
-nameOverride: ""
-fullnameOverride: ""
+nameOverride: "spring-helm-prom"
+fullnameOverride: "spring-helm-prom"
+tag: "latest"
+
+prometheusScrape: true
 
 serviceAccount:
   # Specifies whether a service account should be created

@@ -61,3 +61,14 @@ Create the name of the service account to use
     {{ default "default" .Values.serviceAccount.name }}
 {{- end -}}
 {{- end -}}
+
+{{/*
+Annotations
+*/}}
+{{- define "..annotations" -}}
+{{- if eq $.Values.prometheusScrape true -}}
+prometheus.io/scrape: 'true'
+prometheus.io/path: '/actuator/prometheus'
+prometheus.io/port: '8080'
+{{- end }}
+{{- end -}}

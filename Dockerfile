@@ -17,4 +17,4 @@ FROM openjdk:${JAVA_VERSION}-alpine
 WORKDIR /usr/src/app
 RUN apk add --update ttf-dejavu && rm -rf /var/cache/apk/*
 COPY --from=build /usr/src/app/target/spring-helm-prom-1.0-SNAPSHOT.jar /usr/app/spring-helm-prom-1.0-SNAPSHOT.jar
-ENTRYPOINT ["java","--enable-preview","-jar","/usr/app/.jar"]
+ENTRYPOINT ["java","--enable-preview","-jar","/usr/app/spring-helm-prom-1.0-SNAPSHOT.jar"]
