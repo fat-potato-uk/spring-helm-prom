@@ -250,6 +250,6 @@ And run the same commands as you did in previous challenges, e.g.
 curl -v localhost:8080/employees
 ```
 
-You should now see the metric increase!
+You should now see the metric increase in Prometheus!
 
 Happy Helming!
